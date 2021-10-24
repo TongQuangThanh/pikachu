@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon</title>
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="init()">
+  <header class="container-fluid d-flex bg-primary text-white text-center p-5 flex-wrap">
+    <div>
+      <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/8303.png" alt="pokeBall" srcset="">
+    </div>
+    <div class="flex-grow-1 text-center">
+      <div>
+        <h1 class="mt-5">Pokemon Wikipedia</h1>
+        <h5 class="mb-5">Welcome to Pokemon world</h5>
+      </div>
+      <div>
+        <form onsubmit="return searchPokemon()">
+          <div class="input-group w-75 mx-auto">
+            <span class="input-group-text">Search Pokemon</span>
+            <input id="search" type="search" class="form-control shadow-none" placeholder="by name or id" maxlength="50">
+            <button class="btn btn-outline-light shadow-none" type="submit"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row justify-content-end my-5">
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 d-flex justify-content-end">
+        <a id="clear" class="btn" onclick="clearSearch()">Clear Search result &times;</a>
+        <label for="range" class="form-label d-flex align-items-center mb-0">
+          Num of pokemon/page<span id="badge" class="badge bg-secondary mx-1 px-1">4</span>
+        </label>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-center">
+        <input type="range" class="form-range" value="4" min="1" max="10" step="1" id="range"
+          onchange="updateNumberPerPage()">
+      </div>
+    </div>
+    <div id="main" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-5"></div>
+    <div class="my-4 text-center">
+      <a id="more" class="text-decoration-none link-primary btn fs-5" onclick="loadMore()">Load more...</a>
+    </div>
+  </div>
+  <footer class="bg-light p-4">
+    <div class="text-center">
+      I don't know who am I!!! But from Hanoi with <i class="bi bi-heart-fill text-danger"></i>
+    </div>
+    <div class="text-center">
+      I am not responsible for any information on this site. All information above may not true
+      <i class="bi bi-emoji-smile text-warning"></i>
+    </div>
+    <div class="text-center mt-1">PokeDex 2021. All right will not reserved <i class="fas fa-copyright"></i></div>
+  </footer>
+  <div id="modal" class="w-100 h-100 fixed-top start-0 overflow-auto">
+    <div id="body" class="m-auto p-5 pt-0 w-75 bg-white d-flex flex-column overflow-auto">
+      <h1 class="text-end" onclick="closeModal()" role="button">&times;</h1>
+      <div id="content" class="flex-grow-1"></div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
