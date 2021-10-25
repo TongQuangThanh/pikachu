@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
-<body onload="init()">
+<body onload="">
   <header class="container-fluid d-flex bg-primary text-white text-center p-5 flex-wrap">
     <div>
       <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/8303.png" alt="pokeBall" srcset="">
@@ -32,7 +32,7 @@
         <h5 class="mb-5">Welcome to Pokemon world</h5>
       </div>
       <div>
-        <form onsubmit="return searchPokemon()">
+        <form onsubmit="">
           <div class="input-group w-75 mx-auto">
             <span class="input-group-text">Search Pokemon</span>
             <input id="search" type="search" class="form-control shadow-none" placeholder="by name or id" maxlength="50">
@@ -45,19 +45,158 @@
   <div class="container">
     <div class="row justify-content-end my-5">
       <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 d-flex justify-content-end">
-        <a id="clear" class="btn" onclick="clearSearch()">Clear Search result &times;</a>
+        <a id="clear" class="btn" onclick="">Clear Search result &times;</a>
         <label for="range" class="form-label d-flex align-items-center mb-0">
           Num of pokemon/page<span id="badge" class="badge bg-secondary mx-1 px-1">4</span>
         </label>
       </div>
       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-center">
         <input type="range" class="form-range" value="4" min="1" max="10" step="1" id="range"
-          onchange="updateNumberPerPage()">
+          onchange="">
       </div>
     </div>
-    <div id="main" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-5"></div>
+    <div id="main" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-5">
+      <div class="col">
+        <div class="card h-100 border-0">
+          <div class="ratio ratio-1x1">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              class="card-img-top" alt="...">
+          </div>
+          <div class="card-body p-0 mt-4 d-flex flex-column">
+            <h1 class="card-title p-1">Pokemon</h1>
+            <table class="table table-hover mb-0">
+              <tbody>
+                <tr>
+                  <td colspan="2">Type</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="d-flex">
+                      <h5><span class="p-2 py-0 rounded-pill btn btn-outline-success mx-1">Grass</span></h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td class="text-end">5 kg</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td class="text-end">0.2 m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary shadow-none detail">Detail</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            class="card-img-top" alt="...">
+          <div class="card-body p-0 mt-4">
+            <h1 class="card-title p-1">Pokemon</h1>
+            <table class="table table-hover mb-0">
+              <tbody>
+                <tr>
+                  <td colspan="2">Type</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="d-flex">
+                      <h5><span class="p-2 py-0 rounded-pill btn btn-outline-success mx-1">Grass</span></h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td class="text-end">5 kg</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td class="text-end">0.2 m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary shadow-none detail">Detail</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            class="card-img-top" alt="...">
+          <div class="card-body p-0 mt-4">
+            <h1 class="card-title p-1">Pokemon</h1>
+            <table class="table table-hover mb-0">
+              <tbody>
+                <tr>
+                  <td colspan="2">Type</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="d-flex">
+                      <h5><span class="p-2 py-0 rounded-pill btn btn-outline-success mx-1">Grass</span></h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td class="text-end">5 kg</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td class="text-end">0.2 m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary shadow-none detail">Detail</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            class="card-img-top" alt="...">
+          <div class="card-body p-0 mt-4">
+            <h1 class="card-title p-1">Pokemon</h1>
+            <table class="table table-hover mb-0">
+              <tbody>
+                <tr>
+                  <td colspan="2">Type</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="d-flex">
+                      <h5><span class="p-2 py-0 rounded-pill btn btn-outline-success mx-1">Grass</span></h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td class="text-end">5 kg</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td class="text-end">0.2 m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary shadow-none detail">Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="my-4 text-center">
-      <a id="more" class="text-decoration-none link-primary btn fs-5" onclick="loadMore()">Load more...</a>
+      <a id="more" class="text-decoration-none link-primary btn fs-5" onclick="">Load more...</a>
     </div>
   </div>
   <footer class="bg-light p-4">
@@ -72,7 +211,7 @@
   </footer>
   <div id="modal" class="w-100 h-100 fixed-top start-0 overflow-auto">
     <div id="body" class="m-auto p-5 pt-0 w-75 bg-white d-flex flex-column overflow-auto">
-      <h1 class="text-end" onclick="closeModal()" role="button">&times;</h1>
+      <h1 class="text-end" onclick="" role="button">&times;</h1>
       <div id="content" class="flex-grow-1"></div>
     </div>
   </div>
