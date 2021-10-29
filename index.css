@@ -1,0 +1,4 @@
+.carousel-inner img {
+  height: 75vh;
+  object-fit: contain;
+}

@@ -1,0 +1,74 @@
+<div class="card border-0 h-100">
+  <div class="row g-0 h-100">
+    <div class="col-md-8">
+      ${slides}
+    </div>
+    <div class="col-md-4">
+      <div class="p-0 d-flex flex-column">
+        <div class="d-flex">
+          <h1 class="card-title p-1 flex-grow-1">${name}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="d-flex p-1 flex-wrap flex-grow-1">${types}</div>
+        <table class="table table-hover mb-0">
+          <tbody>
+            <tr>
+              <td colspan="2">Abilities</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="d-flex">${abilities}</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Species</td>
+              <td class="text-end">${species}</td>
+            </tr>
+            <tr>
+              <td>Default</td>
+              <td class="text-end">${is_default}</td>
+            </tr>
+            <tr>
+              <td>Sex</td>
+              <td class="text-end"></td>
+            </tr>
+            <tr>
+              <td>Base experiment</td>
+              <td class="text-end">${experience}</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td class="text-end">${weight} kg</td>
+            </tr>
+            <tr>
+              <td>Height</td>
+              <td class="text-end">${height} m</td>
+            </tr>
+          </tbody>
+        </table>
+        ${stats}
+      </div>
+    </div>
+    <table class="table mb-0 col-12">
+      <tbody>
+        <tr>
+          <td class="table-success"><b>Best to beast:</b></td>
+          <td class="table-warning"><b>Avoid with:</b></td>
+        </tr>
+        <tr>
+          <td class="table-success">
+            <div class="d-flex flex-wrap">${pros}</div>
+          <td class="table-warning">
+            <div class="d-flex flex-wrap">${cons}</div>
+        </tr>
+      </tbody>
+    </table>
+    <div class="col-12">
+      <h2>Encounter</h2>
+      ${encounter}
+    </div>
+    <div class="col-12">
+      <h2>Evolutions</h2>
+    </div>
+  </div>
+</div>
